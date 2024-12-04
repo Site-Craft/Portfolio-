@@ -1,0 +1,365 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    background: linear-gradient(90deg, #66d7f9, #2d91dd, #2d9ddd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;    
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    
+}
+
+.menu-icon::before {
+    top: -6px;
+}
+
+.menu-icon::after {
+    top: 6px;
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 20px; /* Adjust to avoid navbar overlap */
+    transition: padding-top 0.3s ease;
+}
+
+/* Sliding Menu */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: fixed;
+    top: 0;4
+    left: 0;
+    z-index: 1000;
+    width: 85%;
+    background-color: #1a1a1a;
+    padding: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s, top 0.3s ease;
+}
+
+.nav-links.show {
+    opacity: 1;
+    visibility: visible;
+    top: 60px; /* Ensure it stays within the viewport */
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.nav-links a:last-child {
+    border-bottom: none;
+}
+
+/* Main Section */
+.main-section {
+    text-align: center;
+    
+}
+
+.divider {
+    width: 50px;
+    height: 3px;
+    background-color: #f7c35e;
+    margin: 20px auto;
+}
+
+
+/* Main Section */
+.main-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #333;
+    margin-bottom: 20px;
+}
+
+.main-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.divider {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #66d7f9;
+    margin: 10px auto;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: black;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2d9ddd;
+}
+
+.about-section h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #535763;
+}
+
+.elaihoimg {width: 150px;
+height: 150px;}
+
+/* Swiper Section */
+.swiper {
+    width: 100%;
+    height: 400px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+.swiper-slide img {
+    width: auto;
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.swiper-slide p {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+    bottom: 10px;
+}
+i
+.specialize {text-align: left;}
+
+
+
+
+  
+  .vst {
+  background: linear-gradient(45deg, #66d7f9, #2d9ddd);
+  border: none;
+  display: block; /* Makes sure it's treated as a block element */
+  position: relative;
+  top: 20px;
+      margin-left: 0;
+  border-radius: 3px;
+  padding: 12px 24px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vst:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vst:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-container {
+      width: 80%;
+      margin: 0 auto;
+      background-color: #1A1A1A;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .hiii {
+      text-align: left;
+      margin-bottom: 20px;
+      color: #2d9ddd;
+    }
+    
+    .hi {font-size: 50px;}
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 90%;
+      height: 25px;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border: none;      
+      border-radius: 3px;
+    }
+    .bnt[type="submit"] {
+      background: linear-gradient(45deg, #66d7f9, #2d9ddd);
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 3px;   
+      font-size: 20px;
+      height: 53px;
+      width: 65%;
+    }
+    .bnt[type="submit"]:hover {
+      background-color: #FF2945;
+    }
+    
+    #message {height: 130px;}
+    
+    .lognini {
+      width: 23px;
+      height: 23px;
+      position: relative;
+      top: 5px;
+    }
+
+     
+     /* Style for the success image */
+    #successImage {
+       display: flex;
+    justify-content: center;
+    align-items: center;
+      display: none; /* Initially hidden */
+      text-align: center;
+      pointer-events: none;
+      
+    }
+
+    #successImage img {
+      width: 150px;
+      height: auto;
+      pointer-events: none;
+    }
+    
+.imif {position: relative;
+       top: -300px;}
+       
+       
+       
+/* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            background: #222;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #F7C35E;
+            text-decoration: none;
+        }
+        
+.scan {width: 100px;
+height: 100px;
+display: block; 
+margin-left: auto; 
+margin-right: 0; 
+}
